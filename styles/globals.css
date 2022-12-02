@@ -1,11 +1,15 @@
 :root {
 	--black: #3B434E;
+	--gray-light: #EBEBEB;
 	--white: #ffffff;
 	--primary: #7653FC;
+	--primary-hover: #4b21f1;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
 	--font-family: 'Noto Sans', sans-serif;
+	--border-button: 1px solid var(--gray-light);
+	--transition-base: all .3s ease;
 }
 
 html,
