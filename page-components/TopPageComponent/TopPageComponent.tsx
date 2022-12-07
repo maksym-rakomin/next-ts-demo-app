@@ -1,7 +1,8 @@
 import {TopPageComponentProps} from "./TopPageComponent.props";
 import styles from './TopPageComponent.module.css';
-import {Advantages, HhData, Htag, Ptag, Tag} from "../../components";
+import {Advantages, HhData, Htag, Sort, Tag} from "../../components";
 import {TopLevelCategory} from "../../interfaces/page.interface";
+import {SortEnum} from "../../components/Sort/Sort.props";
 
 export const TopPageComponent = ({page, products, firstCategory}: TopPageComponentProps): JSX.Element => {
     return (
@@ -9,7 +10,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
             <div className={styles.title}>
                 <Htag tag="h1">{ page.title }</Htag>
                 { products && <Tag color="gray" size="m">{ products.length }</Tag> }
-                <span>Sort</span>
+                <Sort sort={SortEnum.Rating} setSort={() => {}} />
             </div>
 
             <div className="">
@@ -31,7 +32,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
             </>
             }
 
-            {page.seoText && <Ptag>{page.seoText}</Ptag>}
+            {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{ __html: page.seoText}} />}
 
             <Htag tag='h2'>Получаемые навыки</Htag>
 
