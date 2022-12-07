@@ -19,6 +19,10 @@
 }
 
 .sort span {
+    cursor: pointer;
+}
+
+.sort span {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
