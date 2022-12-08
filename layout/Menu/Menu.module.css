@@ -1,4 +1,6 @@
-.menu {}
+.menu ul {
+    padding-left: 0;
+}
 
 .firstLevel {
     display: grid;
