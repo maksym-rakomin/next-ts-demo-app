@@ -29,6 +29,10 @@
     grid-column: ratestart / end;
 }
 
+.rateTitle a {
+    color: var(--primary);
+}
+
 .hr, .description, .actions {
     grid-column: start / end;
 }
