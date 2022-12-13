@@ -89,10 +89,10 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
                 { product.reviews
                     && product.reviews.length > 0
                     ? product.reviews.map(review => (
-                        <>
-                            <Review key={review._id} review={review} />
+                        <div key={review._id}>
+                            <Review review={review} />
                             <Divider />
-                        </>
+                        </div>
                         ))
                     : (<>
                         <div>Отзывов пока нет, станьте первым!</div>
