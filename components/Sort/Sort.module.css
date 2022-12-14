@@ -23,10 +23,11 @@
 }
 
 .sort span {
-	cursor: pointer;
 	display: grid;
-	grid-template-columns: auto auto;
 
 	align-items: center;
+
+	cursor: pointer;
+	grid-template-columns: auto auto;
 	gap: 8px;
 }
