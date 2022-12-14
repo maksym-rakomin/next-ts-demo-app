@@ -1,30 +1,32 @@
 .sortIcon {
-    display: none;
+	display: none;
 }
 
 .active {
-    font-weight: bold;
-    color: var(--primary);
+	color: var(--primary);
+
+	font-weight: bold;
 }
+
 .active .sortIcon {
-    display: block;
-    margin-right: 8px;
+	display: block;
+
+	margin-right: 8px;
 }
 
 .sort {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    gap: 40px;
+	display: grid;
+	grid-template-columns: auto auto;
+
+	align-items: center;
+	gap: 40px;
 }
 
 .sort span {
-    cursor: pointer;
-}
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: auto auto;
 
-.sort span {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    gap: 8px;
+	align-items: center;
+	gap: 8px;
 }

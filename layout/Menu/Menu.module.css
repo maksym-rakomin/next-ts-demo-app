@@ -1,60 +1,73 @@
 .menu ul {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 .firstLevel {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 20px;
-    align-items: center;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    color: var(--gray-dark);
-    margin-top: 20px;
+	display: grid;
+	align-items: center;
+
+	margin-top: 20px;
+
+	color: var(--gray-dark);
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 25px;
+	grid-template-columns: 24px 1fr;
+	gap: 20px;
 }
+
 .firstLevel svg {
-    fill: var(--gray-dark);
+	fill: var(--gray-dark);
 }
+
 .firstLevelActive,
 .firstLevel:hover,
 .firstLevelActive svg,
 .firstLevel:hover svg {
-    color: var(--primary);
-    fill: var(--primary);
+	color: var(--primary);
+	fill: var(--primary);
 }
 
 .secondBlock {
-    margin-left: 12px;
-    padding-left: 32px;
-    border-left: 1px solid #DFDFDF;
+	margin-left: 12px;
+	padding-left: 32px;
+
+	border-left: 1px solid #DFDFDF;
 }
 
 .secondLevel {
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: var(--gray-dark);
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 16px;
+	margin-bottom: 10px;
+
+	cursor: pointer;
+	text-transform: uppercase;
+
+	color: var(--gray-dark);
+
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
 }
 
 .thirdLevel {
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 16px;
-    display: block;
-    color: var(--gray-dark);
+	display: block;
+
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	color: var(--gray-dark);
+
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 16px;
 }
 
 .thirdLevelActive,
 .thirdLevel:hover {
-    color: var(--primary);
+	color: var(--primary);
 }
 
 .secondLevelBlock {
-    overflow: hidden;
+	overflow: hidden;
 }

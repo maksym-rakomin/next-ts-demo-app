@@ -1,31 +1,37 @@
 .inputWrapper {
-    position: relative;
+	position: relative;
 }
+
 .input {
-    background: var(--white);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    padding: 7px 15px;
-    color: var(--black);
-    border: none;
-    outline-color: var(--primary);
-    font-size: 16px;
-    line-height: 22px;
-    font-family: var(--font-family);
-    transition: var(--transition-base);
+	padding: 7px 15px;
+
+	transition: var(--transition-base);
+
+	color: var(--black);
+	border: none;
+	border-radius: 5px;
+	outline-color: var(--primary);
+	background: var(--white);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+	font-family: var(--font-family);
+	font-size: 16px;
+	line-height: 22px;
 }
+
 .input::placeholder {
-    color: #A4A4A4;
+	color: #A4A4A4;
 }
 
 .error {
-    border: 1px solid var(--red);
-    outline-color: var(--red);
+	border: 1px solid var(--red);
+	outline-color: var(--red);
 }
 
 .errorMessage {
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    color: var(--red);
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+
+	color: var(--red);
 }

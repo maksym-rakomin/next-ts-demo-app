@@ -2,29 +2,32 @@
 	--black: #3B434E;
 	--gray-light: #EBEBEB;
 	--gray-dark: #787D85;
-	--white: #ffffff;
+	--white: #FFF;
 	--primary: #7653FC;
-	--primary-hover: #4b21f1;
+	--primary-hover: #4B21F1;
 	--red: #FC836D;
-	--red-light: #ffd2ca;
+	--red-light: #FFD2CA;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
 	--font-family: 'Noto Sans', sans-serif;
 	--border-button: 1px solid var(--gray-light);
-	--transition-base: all .3s ease;
+	--transition-base: all 0.3s ease;
 }
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: var(--font-family);
+
 	color: var(--black);
-	background: #f5f6f8;
+	background: #F5F6F8;
+
+	font-family: var(--font-family);
 }
 
 a {
 	text-decoration: none;
+
 	color: inherit;
 }
 
