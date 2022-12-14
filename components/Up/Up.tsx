@@ -1,5 +1,5 @@
 import styles from './Up.module.css';
-import ArrowUpIcon from './ArrowUp.svg';
+import {ButtonIcon} from '../ButtonIcon/ButtonIcon'
 import {useScrollY} from "../../hooks/useScrollY";
 import {useAnimation, motion} from "framer-motion";
 import {useEffect} from "react";
@@ -9,10 +9,10 @@ export const Up = (): JSX.Element => {
     const y = useScrollY()
 
     useEffect(() => {
-        controls.start({ opacity: y / document.body.scrollHeight })
+        controls.start({opacity: y / document.body.scrollHeight})
     }, [y, controls])
 
-    const scroolToTop = () => {
+    const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
@@ -20,13 +20,12 @@ export const Up = (): JSX.Element => {
     }
 
     return (
-        <motion.button
+        <motion.div
             className={styles.up}
-            onClick={scroolToTop}
             animate={controls}
             initial={{opacity: 0}}
         >
-            <ArrowUpIcon />
-        </motion.button>
+            <ButtonIcon appearance='primary' icon='up' onClick={scrollToTop}/>
+        </motion.div>
     )
 }
