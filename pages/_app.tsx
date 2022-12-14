@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type {AppProps} from 'next/app'
 import Head from "next/head";
 
-export default function App({Component, pageProps}: AppProps): JSX.Element {
+export default function App({Component, pageProps, router}: AppProps): JSX.Element {
     return <>
         <Head>
             <title>My top</title>
@@ -13,6 +13,7 @@ export default function App({Component, pageProps}: AppProps): JSX.Element {
                 href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;700&display=swap"
                 rel="stylesheet"
             />
+            <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}/>
         </Head>
 
         <Component {...pageProps} />
