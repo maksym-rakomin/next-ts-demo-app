@@ -24,6 +24,10 @@ import cn from "classnames";
             block: 'start',
         })
     }
+    const variants = {
+        visible: { opacity: 1, height: 'auto', },
+        hidden: { opacity: 0, height: 0,},
+    }
 
     return (
         <div className={className} ref={ref} {...props} >
@@ -96,30 +100,29 @@ import cn from "classnames";
                 </div>
             </Card>
 
-            <Card
-                ref={reviewRef}
-                color="blue"
-                className={cn(styles.reviews, {
-                    [styles.opened]: isReviewOpened,
-                    [styles.closed]: !isReviewOpened,
-                })}
-            >
-                { product.reviews
+            <motion.div animate={isReviewOpened ? 'visible' : 'hidden'} variants={variants} initial="hidden">
+                <Card
+                    ref={reviewRef}
+                    color="blue"
+                    className={styles.reviews}
+                >
+                    {product.reviews
                     && product.reviews.length > 0
-                    ? product.reviews.map(review => (
-                        <div key={review._id}>
-                            <Review review={review} />
-                            <Divider />
-                        </div>
+                        ? product.reviews.map(review => (
+                            <div key={review._id}>
+                                <Review review={review}/>
+                                <Divider/>
+                            </div>
                         ))
-                    : (<>
-                        <div>Отзывов пока нет, станьте первым!</div>
-                        <Divider />
-                       </>)
-                }
+                        : (<>
+                            <div>Отзывов пока нет, станьте первым!</div>
+                            <Divider/>
+                        </>)
+                    }
 
-                <ReviewForm productId={product._id} />
-            </Card>
+                    <ReviewForm productId={product._id}/>
+                </Card>
+            </motion.div>
         </div>
     )
 }))
