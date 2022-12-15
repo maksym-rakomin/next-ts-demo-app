@@ -4,7 +4,7 @@ import StarIcon from './Star.svg';
 import cn from "classnames";
 import {useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef} from "react";
 
-export const Rating = forwardRef(({isEditable = false, rating, setRating, error, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+const Rating = forwardRef(({isEditable = false, rating, setRating, error, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
 
     const constructRating = (currentRating: number) => {
@@ -73,3 +73,7 @@ export const Rating = forwardRef(({isEditable = false, rating, setRating, error,
             { error && <span className={styles.errorMessage}>{error.message}</span> }
         </div>)
 })
+
+Rating.displayName = "Rating";
+
+export { Rating }

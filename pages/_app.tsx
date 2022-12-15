@@ -6,13 +6,6 @@ export default function App({Component, pageProps, router}: AppProps): JSX.Eleme
     return <>
         <Head>
             <title>My top</title>
-            <link rel="icon" href="/favicon.ico"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com"/>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;700&display=swap"
-                rel="stylesheet"
-            />
             <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN + router.asPath}/>
         </Head>
 

@@ -13,7 +13,8 @@ import cn from "classnames";
  import {ReviewForm} from "../ReviewForm/ReviewForm";
  import { motion } from "framer-motion";
 
- export const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
+ // eslint-disable-next-line react/display-name
+const Product = motion(forwardRef(({ product, className, ...props }: ProductProps, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false)
     const reviewRef = useRef<HTMLDivElement>(null)
     const scrollToReview = (e) => {
@@ -126,3 +127,7 @@ import cn from "classnames";
         </div>
     )
 }))
+
+Product.displayName = "Product";
+
+export { Product }

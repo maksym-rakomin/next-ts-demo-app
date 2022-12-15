@@ -47,9 +47,9 @@
     "jsx": "preserve"
   },
   "include": [
-    "next-env.d.ts",
+    "next-env-custom.d.ts",
+    "images.d.ts",
     "**/*.ts",
-    "svg.d.ts",
     "**/*.tsx"
   ],
   "exclude": [
