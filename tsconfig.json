@@ -49,6 +49,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
+    "svg.d.ts",
     "**/*.tsx"
   ],
   "exclude": [
